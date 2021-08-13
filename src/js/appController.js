@@ -38,7 +38,8 @@ define(['knockout', 'ojs/ojcontext', 'ojs/ojmodule-element-utils', 'ojs/ojknocko
         { path: 'dashboard', detail: { label: 'Dashboard', iconClass: 'oj-ux-ico-bar-chart' } },
         { path: 'incidents', detail: { label: 'Incidents', iconClass: 'oj-ux-ico-fire' } },
         { path: 'customers', detail: { label: 'Customers', iconClass: 'oj-ux-ico-contact-group' } },
-        { path: 'about', detail: { label: 'About', iconClass: 'oj-ux-ico-information-s' } }
+        { path: 'about', detail: { label: 'About', iconClass: 'oj-ux-ico-information-s' } },
+        { path: 'myhello', detail: { label: 'Myhello', iconClass: 'fas fa-fighter-jet fa-lg' } }
       ];
 
       // Router setup
@@ -73,7 +74,7 @@ define(['knockout', 'ojs/ojcontext', 'ojs/ojmodule-element-utils', 'ojs/ojknocko
       // Application Name used in Branding Area
       this.appName = ko.observable("App Name");
       // User Info used in Global Navigation area
-      this.userLogin = ko.observable("john.hancock@oracle.com");
+      this.userLogin = ko.observable("jose.j.orozco@oracle.com");
 
       // Footer
       this.footerLinks = [
