@@ -8,20 +8,16 @@
 /*
  * Your incidents ViewModel code goes here
  */
-define(['accUtils'],
- function(accUtils) {
+define(['accUtils','knockout','jquery',"ojs/ojarraydataprovider",'text!/js/data/data.json','ojs/ojchart'],
+ function(accUtils,ko,$,ArrayDataProvider,file) {
     function IncidentsViewModel() {
-      // Below are a set of the ViewModel methods invoked by the oj-module component.
-      // Please reference the oj-module jsDoc for additional information.
+      var self = this;
 
-      /**
-       * Optional ViewModel method invoked after the View is inserted into the
-       * document DOM.  The application can put logic that requires the DOM being
-       * attached here.
-       * This method might be called multiple times - after the View is created
-       * and inserted into the DOM and after the View is reconnected
-       * after being disconnected.
-       */
+      
+
+      this.dataProvider = new ArrayDataProvider(JSON.parse(file), {
+        keyAttributes: "name",
+    });
       this.connected = () => {
         accUtils.announce('Incidents page loaded.', 'assertive');
         document.title = "Incidents";
